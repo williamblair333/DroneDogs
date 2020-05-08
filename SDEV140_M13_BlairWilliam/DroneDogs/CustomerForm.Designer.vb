@@ -23,7 +23,7 @@ Partial Class CustomerForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerForm))
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lsbCustomer = New System.Windows.Forms.ListBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -32,18 +32,18 @@ Partial Class CustomerForm
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.btnSubmitOrder = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnAddNewCustomer = New System.Windows.Forms.Button()
+        Me.btnSelectHighlightedCustomer = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'lsbCustomer
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 39)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(277, 95)
-        Me.ListBox1.TabIndex = 0
+        Me.lsbCustomer.FormattingEnabled = True
+        Me.lsbCustomer.Location = New System.Drawing.Point(12, 39)
+        Me.lsbCustomer.Name = "lsbCustomer"
+        Me.lsbCustomer.Size = New System.Drawing.Size(277, 95)
+        Me.lsbCustomer.TabIndex = 0
         '
         'PictureBox1
         '
@@ -114,23 +114,23 @@ Partial Class CustomerForm
         Me.lblFirstName.TabIndex = 28
         Me.lblFirstName.Text = "First Name:"
         '
-        'btnSubmitOrder
+        'btnAddNewCustomer
         '
-        Me.btnSubmitOrder.Location = New System.Drawing.Point(28, 289)
-        Me.btnSubmitOrder.Name = "btnSubmitOrder"
-        Me.btnSubmitOrder.Size = New System.Drawing.Size(120, 23)
-        Me.btnSubmitOrder.TabIndex = 27
-        Me.btnSubmitOrder.Text = "Submit Order"
-        Me.btnSubmitOrder.UseVisualStyleBackColor = True
+        Me.btnAddNewCustomer.Location = New System.Drawing.Point(12, 289)
+        Me.btnAddNewCustomer.Name = "btnAddNewCustomer"
+        Me.btnAddNewCustomer.Size = New System.Drawing.Size(163, 23)
+        Me.btnAddNewCustomer.TabIndex = 27
+        Me.btnAddNewCustomer.Text = "Add New Customer"
+        Me.btnAddNewCustomer.UseVisualStyleBackColor = True
         '
-        'btnExit
+        'btnSelectHighlightedCustomer
         '
-        Me.btnExit.Location = New System.Drawing.Point(187, 289)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(120, 23)
-        Me.btnExit.TabIndex = 26
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnSelectHighlightedCustomer.Location = New System.Drawing.Point(219, 289)
+        Me.btnSelectHighlightedCustomer.Name = "btnSelectHighlightedCustomer"
+        Me.btnSelectHighlightedCustomer.Size = New System.Drawing.Size(163, 23)
+        Me.btnSelectHighlightedCustomer.TabIndex = 26
+        Me.btnSelectHighlightedCustomer.Text = "Select Highlighted Customer"
+        Me.btnSelectHighlightedCustomer.UseVisualStyleBackColor = True
         '
         'CustomerForm
         '
@@ -143,11 +143,11 @@ Partial Class CustomerForm
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.lblLastName)
         Me.Controls.Add(Me.lblFirstName)
-        Me.Controls.Add(Me.btnSubmitOrder)
-        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnAddNewCustomer)
+        Me.Controls.Add(Me.btnSelectHighlightedCustomer)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lsbCustomer)
         Me.Name = "CustomerForm"
         Me.Text = "William Blair"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -156,7 +156,7 @@ Partial Class CustomerForm
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lsbCustomer As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblTitle As Label
     Friend WithEvents txtEmail As TextBox
@@ -165,6 +165,6 @@ Partial Class CustomerForm
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblLastName As Label
     Friend WithEvents lblFirstName As Label
-    Friend WithEvents btnSubmitOrder As Button
-    Friend WithEvents btnExit As Button
+    Friend WithEvents btnAddNewCustomer As Button
+    Friend WithEvents btnSelectHighlightedCustomer As Button
 End Class

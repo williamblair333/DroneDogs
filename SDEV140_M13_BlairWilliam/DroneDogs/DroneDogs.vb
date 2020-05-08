@@ -46,9 +46,15 @@
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmitOrder.Click
-        MsgBox("Thank you for ordering your meal from DroneDogs!")
-
-        'Display message box thanking the user
+        If chkConsent.Checked = False Then
+            MessageBox.Show("ERROR...You must check the box to give DroneDogs permission to use your location information before continuing.")
+        ElseIf txtTotalCost.Text = "" Then
+            MessageBox.Show("ERROR...You must order at least one item.")
+        ElseIf txtEmail.Text = "" Then
+            MessageBox.Show("ERROR...Please get customer information for this order.")
+        Else
+            MessageBox.Show("Thank you for ordering from DroneDogs!")
+        End If
 
     End Sub
 
@@ -81,7 +87,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGetCustomerInfo.Click
-
+        CustomerForm.Show()
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles lblFirstName.Click
@@ -90,5 +96,15 @@
 
     Private Sub picLogo_Click(sender As Object, e As EventArgs) Handles picLogo.Click
 
+    End Sub
+
+    Private Sub btnFormClear_Click(sender As Object, e As EventArgs) Handles btnFormClear.Click
+        txtBeefDogs.Text = ""
+        txtPorkDogs.Text = ""
+        txtTurkeyDogs.Text = ""
+        txtSubtotal.Text = ""
+        txtSalesTax.Text = ""
+        txtTotalCost.Text = ""
+        chkConsent.Checked = False
     End Sub
 End Class

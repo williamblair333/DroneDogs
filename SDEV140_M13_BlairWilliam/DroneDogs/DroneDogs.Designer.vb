@@ -248,6 +248,7 @@ Partial Class DroneDogsOrder
         '
         Me.txtFirstName.Location = New System.Drawing.Point(122, 359)
         Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.ReadOnly = True
         Me.txtFirstName.Size = New System.Drawing.Size(225, 20)
         Me.txtFirstName.TabIndex = 23
         '
@@ -255,6 +256,7 @@ Partial Class DroneDogsOrder
         '
         Me.txtLastName.Location = New System.Drawing.Point(122, 386)
         Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.ReadOnly = True
         Me.txtLastName.Size = New System.Drawing.Size(225, 20)
         Me.txtLastName.TabIndex = 24
         '
@@ -262,6 +264,7 @@ Partial Class DroneDogsOrder
         '
         Me.txtEmail.Location = New System.Drawing.Point(122, 413)
         Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.ReadOnly = True
         Me.txtEmail.Size = New System.Drawing.Size(225, 20)
         Me.txtEmail.TabIndex = 25
         '
